@@ -1,0 +1,39 @@
+p {
+  display: block;
+  color: white;
+  font: 1rem 'Fira Sans', sans-serif;
+}
+
+a {
+  color: lightblue;
+  font: 1rem 'Fira Sans', sans-serif;
+}
+
+html {
+  background-image: url("space.png");
+}
+
+input,
+p {
+  margin: 0.5rem 0;
+}
+
+#earthLevel{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#totalCarbon{
+  position: absolute;
+  top: 390px;
+  right: 0;
+  font: 5rem 'Fira Sans', sans-serif;
+}
+
+#totalCarbonPAGE2{
+  position: absolute;
+  top: 390px;
+  right: 0;
+  font: 5rem 'Fira Sans', sans-serif;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <img src="earth1.png" alt="Earth Level" id="earthLevel">
+    
+  </body>
+
+  <!-- FIRST PAGE -->
+  <div id="page1" style="display:block" class="moneyInput">
+    <body>
+      <p id="totalCarbon">0.00 lb</p>
+      <p>What is your monthly electric bill?</p>
+      
+      <input type="text" id="meb" placeholder="$0" oninput="calculate('meb');"/><br />
+      <p>What is your monthly gas bill?</p>
+      <input type="text" id="mgb" placeholder="$0" oninput="calculate('mgb');"/><br />
+      <p>What is your monthly oil bill?</p>
+      <input type="text" id="mob" placeholder="$0" oninput="calculate('mob');"/><br />
+      <p>What is your total yearly mileage by car?</p>
+      <input type="text" id="tymbc" placeholder="$0" oninput="calculate('tymbc');"/><br />
+      <p>What is your total number of flight taken in the past year (4 hours or shorter)?</p>
+      <input type="text" id="ftpyl" placeholder="$0" oninput="calculate('ftpyl');"/><br />
+      <p>What is your total number of flight taken in the past year (4 hours or longer)?</p>
+      <input type="text" id="ftpym" placeholder="$0" oninput="calculate('ftpym');"/><br />
+      <p>Do you recycle newspaper (y/n)?</p>
+      <input type="text" id="dyrn" placeholder="y/n" oninput="calculate('dyrn');"/><br />
+      <p>Do you recycle aluminum and tin (y/n)?</p>
+      <input type="text" id="dyra" placeholder="y/n" oninput="calculate('dyra');"/><br />
+    </body>
+  </div>
+
+  <!-- SECOND PAGE -->
+  <div id="page2" style="display:none">
+    <body>
+      <p id="totalCarbonPAGE2">0.00 lb</p>
+      <p id="idealCarbon" style="display:block">The "ideal" carbon twelve-inch print is anywhere from 6,000 to 15,999 pounds
+        per year.</p>
+      <p id="yourCarbon" style="display:block">0 lb</p>
+      <p id="comparingCarbon" style="display:block"></p>
+      <p>To offset your carbon emissions, consider donating to Carbonfund.</p>
+      <a href="https://carbonfund.org/carbon-offsets/" target="_blank">Carbonfund.org</a>
+      <p id="amountNeeded"></p>
+      <p>Enter a dollar amount and your carbon emissions will be adjusted based on the carbon offset.</p>
+      <input type="text" id="carbFundDonate" placeholder="$0" oninput="adjust('carbFundDonate');"/><br/>
+      <p id="donationAmount">You're new carbon total based on if you donate $0 is: </p>
+      <p id="newCarbonAmount">0.00 lb per year</p>
+    </body>
+  </div>
+
+  <!-- NEXT PAGE BUTTON -->
+  <div id="pageButton" style="display:block">
+    <body>
+      <button type="button" onclick="prevPage();" id="prevButton" style="display:none">prev</button>
+      <button type="button" onclick="nextPage();" id="nextButton">next</button>
+    </body>
+  </div>
+</html>
