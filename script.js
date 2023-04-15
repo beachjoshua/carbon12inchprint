@@ -56,7 +56,7 @@ function adjust(id)
 function calculate(id)
 {
   //removeDollarSign(id);
-  if(id!='dyrn' && id!='dyra')
+  if(id=='meb' || id=='mgb' || id=='mob')
     addDollarSign(id);
   
   var totCarbon = 0.0;
@@ -128,6 +128,7 @@ function nextPage()
     {
       document.getElementById("prevButton").style.display= "block";
       document.getElementById("nextButton").style.display= "none";
+      document.getElementById("totalCarbonPAGE2").innerHTML = totalCarbon.toFixed(2) + " lb"
     }
   }
 }
